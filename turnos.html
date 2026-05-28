@@ -29,31 +29,148 @@
 
     <section class="panel form-panel">
       <h2>Formulario de solicitud</h2>
-      <form id="turnoForm" novalidate>
-        <label>Nombre completo
-          <input type="text" id="nombre" name="nombre" placeholder="Ej. María Gómez">
-        </label>
-        <label>Email
-          <input type="email" id="email" name="email" placeholder="tu@email.com">
-        </label>
-        <label>Especialidad
-          <select id="especialidad" name="especialidad">
-            <option value="">Seleccione una especialidad</option>
-            <option>Clínica General</option>
-            <option>Cardiología</option>
-            <option>Pediatría</option>
-            <option>Ginecología</option>
-            <option>Traumatología</option>
-            <option>Neurología</option>
+      <form id="turnoForm" class="turno-form" novalidate>
+        <fieldset class="form-section">
+          <legend>Sección 1: Datos del Paciente</legend>
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej. María" required>
+
+          <label for="apellido">Apellido</label>
+          <input type="text" id="apellido" name="apellido" placeholder="Ej. Gómez" required>
+
+          <label for="dni">DNI</label>
+          <input type="text" id="dni" name="dni" placeholder="Ej. 30111222" required>
+
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="Ej. 1123456789" required>
+
+          <label for="fechaNacimiento">Fecha de nacimiento</label>
+          <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+
+          <label for="genero">Género</label>
+          <select id="genero" name="genero" required>
+            <option value="">Seleccione una opción</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+            <option value="Otro">Otro</option>
+            <option value="Prefiero no especificar">Prefiero no especificar</option>
           </select>
-        </label>
-        <label>Fecha preferida
-          <input type="date" id="fecha" name="fecha">
-        </label>
-        <label>Mensaje
-          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contanos brevemente qué necesitás."></textarea>
-        </label>
-        <button type="submit">Enviar solicitud</button>
+        </fieldset>
+
+        <fieldset class="form-section">
+          <legend>Sección 2: Datos del Turno</legend>
+          <label for="especialidad">Especialidad</label>
+          <select id="especialidad" name="especialidad" required>
+            <option value="">Seleccione una especialidad</option>
+            <option value="Clínica General">Clínica General</option>
+            <option value="Cardiología">Cardiología</option>
+            <option value="Pediatría">Pediatría</option>
+            <option value="Ginecología">Ginecología</option>
+            <option value="Traumatología">Traumatología</option>
+            <option value="Neurología">Neurología</option>
+          </select>
+
+          <label for="medico">Médico</label>
+          <select id="medico" name="medico" disabled required>
+            <option value="">Seleccione un médico</option>
+          </select>
+
+          <label for="tipoConsulta">Tipo de consulta</label>
+          <select id="tipoConsulta" name="tipoConsulta" required>
+            <option value="">Seleccione una opción</option>
+            <option value="Primera consulta">Primera consulta</option>
+            <option value="Control">Control</option>
+            <option value="Resultado de estudios">Resultado de estudios</option>
+          </select>
+
+          <label for="fechaTurno">Fecha del turno</label>
+          <input type="date" id="fechaTurno" name="fechaTurno" required>
+
+          <label for="horaTurno">Hora del turno</label>
+          <input type="time" id="horaTurno" name="horaTurno" required>
+
+          <label for="modalidad">Modalidad</label>
+          <select id="modalidad" name="modalidad" required>
+            <option value="">Seleccione una modalidad</option>
+            <option value="Presencial">Presencial</option>
+            <option value="Videoconsulta">Videoconsulta</option>
+          </select>
+
+          <div id="plataformaGroup" class="hidden-field">
+            <label for="plataforma">Plataforma preferida</label>
+            <select id="plataforma" name="plataforma">
+              <option value="">Seleccione una plataforma</option>
+              <option value="Zoom">Zoom</option>
+              <option value="Google Meet">Google Meet</option>
+              <option value="Teams">Teams</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+          <legend>Sección 3: Cobertura Médica</legend>
+          <label for="cobertura">Cobertura</label>
+          <select id="cobertura" name="cobertura" required>
+            <option value="">Seleccione una cobertura</option>
+            <option value="OSDE">OSDE</option>
+            <option value="Swiss Medical">Swiss Medical</option>
+            <option value="Galeno">Galeno</option>
+            <option value="IOMA">IOMA</option>
+            <option value="Medicus">Medicus</option>
+            <option value="Sancor Salud">Sancor Salud</option>
+            <option value="Particular">Particular</option>
+          </select>
+
+          <div id="credencialGroup" class="hidden-field">
+            <label for="numeroCredencial">Número de credencial</label>
+            <input type="text" id="numeroCredencial" name="numeroCredencial" placeholder="Ingrese su número de credencial">
+          </div>
+
+          <div id="planGroup" class="hidden-field">
+            <label for="plan">Plan</label>
+            <input type="text" id="plan" name="plan" placeholder="Ej. Básico / Premium">
+          </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+          <legend>Sección 4: Información Adicional</legend>
+          <label class="checkbox-row" for="primeraVisita">
+            <input type="checkbox" id="primeraVisita" name="primeraVisita">
+            Es la primera vez que consulta en SaludPlus
+          </label>
+
+          <div id="comoNosConocioGroup" class="hidden-field">
+            <label for="comoNosConocio">Cómo nos conoció</label>
+            <select id="comoNosConocio" name="comoNosConocio">
+              <option value="">Seleccione una opción</option>
+              <option value="Búsqueda en internet">Búsqueda en internet</option>
+              <option value="Recomendación de un conocido">Recomendación de un conocido</option>
+              <option value="Redes sociales">Redes sociales</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+
+          <label for="motivoConsulta">Motivo de la consulta</label>
+          <textarea id="motivoConsulta" name="motivoConsulta" rows="4" placeholder="Describa el motivo de la consulta" required></textarea>
+
+          <label class="checkbox-row" for="estudiosPrevios">
+            <input type="checkbox" id="estudiosPrevios" name="estudiosPrevios">
+            Tiene estudios previos relacionados con la consulta
+          </label>
+
+          <div id="descripcionEstudiosGroup" class="hidden-field">
+            <label for="descripcionEstudios">Descripción de estudios</label>
+            <textarea id="descripcionEstudios" name="descripcionEstudios" rows="3" placeholder="Indique qué estudios o estudios previos trae"></textarea>
+          </div>
+        </fieldset>
+
+        <div class="actions">
+          <button type="submit">Solicitar Turno</button>
+          <button type="reset" class="secondary-button">Limpiar formulario</button>
+        </div>
         <p class="status" id="status" aria-live="polite"></p>
       </form>
     </section>
