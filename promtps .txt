@@ -40,7 +40,17 @@ siguiendo con esto también necesito que cumplas con los siguientes Requisitos C
 • Fuentes legibles; se puede usar Google Fonts (max. 2 familias).
 • El sitio debe verse correctamente en pantallas de al menos 1024px de ancho.
 
-2.- Respuesta: La respuesta de copilot fue todo el commit 1
+2.- Respuesta: Listo: la web quedó completada y lista para revisar en index.html, con la sección de turnos en turnos.html.
+
+Cambios realizados:
+
+Página principal responsive con header sticky, hero, especialidades (CSS Grid), médicos (Flexbox), obras sociales y contacto.
+Estilos profesionales en style.css.
+Página de turnos con formulario y validación vanilla en turnos.html, turnos.css y validaciones.js.
+Verificación:
+
+No se detectaron errores en el editor para los archivos principales.
+La página se cargó correctamente en el navegador.
 
 3.- Explicación: Se crearon los apartados del encabezado, la sección hero, las 
 especialidades medicas, la sección de nuestros médicos, las obras sociales afiliadas, 
@@ -289,4 +299,17 @@ Si quieres, puedo corregir esos puntos en el siguiente paso, pero sin tocar prom
 Explicación: Aca se le pidio a la IA que validara el codigo segun la rubrica indicada por la guia, con la respuesta se dio a entender
 que no deberia haber ningun error en el codigo
 
-Promt N5: 
+Promt N5: Agrege las imagenes Medico1 (es un solo medico), medicos2 (que son 2 medicos) y medica33 (una medica) 
+me gustaria que posicionaras a los medicos dentro del sitio web de forma que se siga viendo formal, mantenga lo 
+interactivo y sea mas una decoracion y agregado al sitio web los medicos
+
+respuesta: Listo, la sección de médicos quedó con las imágenes incorporadas y con un estilo más formal y decorativo.
+
+Cambios aplicados:
+
+Se reemplazaron los avatares iniciales por fotos reales en la sección de profesionales.
+Se añadió un efecto visual suave al pasar el mouse para que se vea más interactivo.
+Se mantuvo el diseño responsivo y limpio.
+No se detectaron errores de sintaxis en index.html ni en style.css.
+
+Explicación: Se agregaron imagenes para mejorar la estructura e interactividad el seitio web 
