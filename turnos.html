@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaludPlus | Solicitar turno</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/turnos.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">SaludPlus</a>
+    <a class="ghost-link" href="index.html">Volver al inicio</a>
+  </header>
+
+  <main class="page-shell">
+    <section class="panel intro-panel">
+      <p class="eyebrow">Turnos</p>
+      <h1>Solicitá tu consulta en pocos pasos</h1>
+      <p>Completá los datos y nuestro equipo te contactará para confirmar la disponibilidad.</p>
+      <ul class="benefits">
+        <li>Respuesta rápida por correo o teléfono</li>
+        <li>Atención en múltiples especialidades</li>
+        <li>Planificación simple y clara</li>
+      </ul>
+    </section>
+
+    <section class="panel form-panel">
+      <h2>Formulario de solicitud</h2>
+      <form id="turnoForm" novalidate>
+        <label>Nombre completo
+          <input type="text" id="nombre" name="nombre" placeholder="Ej. María Gómez">
+        </label>
+        <label>Email
+          <input type="email" id="email" name="email" placeholder="tu@email.com">
+        </label>
+        <label>Especialidad
+          <select id="especialidad" name="especialidad">
+            <option value="">Seleccione una especialidad</option>
+            <option>Clínica General</option>
+            <option>Cardiología</option>
+            <option>Pediatría</option>
+            <option>Ginecología</option>
+            <option>Traumatología</option>
+            <option>Neurología</option>
+          </select>
+        </label>
+        <label>Fecha preferida
+          <input type="date" id="fecha" name="fecha">
+        </label>
+        <label>Mensaje
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contanos brevemente qué necesitás."></textarea>
+        </label>
+        <button type="submit">Enviar solicitud</button>
+        <p class="status" id="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/validaciones.js"></script>
+</body>
+</html>
