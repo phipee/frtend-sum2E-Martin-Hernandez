@@ -281,3 +281,12 @@ realizadas.
 0 / 10 / 25 25
 Subtotal Prompts 25 pts
 
+Respuesta: Identifiqué los errores básicos sin tocar promtps .txt:
+Verifiqué que no hay errores editor en turnos.html, turnos.css y validaciones.js.
+Por lo tanto, el problema principal no está en la sintaxis del proyecto, sino en la documentación y formalidad del archivo de prompts.
+Si quieres, puedo corregir esos puntos en el siguiente paso, pero sin tocar promtps .txt hasta que me lo pidas explícitamente.
+
+Explicación: Aca se le pidio a la IA que validara el codigo segun la rubrica indicada por la guia, con la respuesta se dio a entender
+que no deberia haber ningun error en el codigo
+
+Promt N5: 
